@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JUNE // The Blue File</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@500;600&display=swap');
+:root{--bg:#030811;--card:rgba(8,23,41,.72);--line:rgba(110,194,255,.2);--blue:#70c7ff;--text:#eef8ff;--muted:#a7bfd3}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:-35%;z-index:-5;background:radial-gradient(circle at 18% 18%,#075ca52b,transparent 23%),radial-gradient(circle at 82% 27%,#496cff1d,transparent 25%),radial-gradient(circle at 48% 90%,#00b9ff18,transparent 28%);filter:blur(25px);animation:float 18s ease-in-out infinite alternate}
+@keyframes float{to{transform:translate(4%,-3%) scale(1.06)}}
+.stars{position:fixed;inset:0;z-index:-4;opacity:.65;background-image:radial-gradient(1px 1px at 8% 16%,#fff,transparent),radial-gradient(1px 1px at 18% 74%,#fff,transparent),radial-gradient(1px 1px at 31% 42%,#fff,transparent),radial-gradient(1px 1px at 52% 18%,#fff,transparent),radial-gradient(1px 1px at 69% 63%,#fff,transparent),radial-gradient(1px 1px at 83% 26%,#fff,transparent),radial-gradient(1px 1px at 94% 84%,#fff,transparent)}
+.shell{width:min(980px,92vw);margin:auto;padding:28px 0 80px}.top{display:flex;justify-content:space-between;align-items:center;color:#7892aa;font-size:11px;letter-spacing:.2em;text-transform:uppercase}.arc{width:48px;height:48px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--blue);font-weight:700;box-shadow:0 0 30px #45adff16}
+.hero{min-height:92vh;display:grid;place-items:center;text-align:center;padding:70px 0}.eyebrow{font-size:12px;letter-spacing:.3em;color:var(--blue);text-transform:uppercase}
+h1{font:500 clamp(70px,14vw,145px)/.8 "Playfair Display",serif;margin:25px 0 24px;letter-spacing:-.04em}h1 span{font-style:italic;color:#a9ddff}
+.hero p{max-width:650px;margin:auto;color:var(--muted);line-height:1.9;font-size:17px}.btn{display:inline-block;margin-top:30px;border:1px solid #73caff55;border-radius:999px;background:#55b6ff10;color:white;padding:13px 21px;cursor:pointer;transition:.25s}.btn:hover{transform:translateY(-3px);background:#55b6ff1b}
+.card{background:var(--card);border:1px solid var(--line);border-radius:32px;padding:clamp(28px,6vw,58px);margin:26px 0;box-shadow:0 28px 100px #0006;backdrop-filter:blur(20px)}
+.label{color:var(--blue);font-size:10px;letter-spacing:.25em;text-transform:uppercase;margin-bottom:18px}.title{font:500 clamp(34px,5vw,57px)/1.1 "Playfair Display",serif;margin-bottom:20px}.small{color:var(--muted);line-height:1.9;font-size:16px}.quote{border-left:2px solid #70c7ff88;padding-left:20px;color:#dff3ff;line-height:1.8;margin-top:25px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.mini{padding:26px;border:1px solid var(--line);border-radius:22px;background:#07192a99}.mini b{display:block;margin-bottom:10px;color:#dff4ff}.mini p{margin:0;color:var(--muted);line-height:1.7}
+.marvel{position:relative;overflow:hidden}.marvel:after{content:"";position:absolute;right:-80px;top:-100px;width:260px;height:260px;border:1px solid #70c7ff12;border-radius:50%;box-shadow:0 0 0 45px #70c7ff06,0 0 0 90px #70c7ff03}
+.slides{min-height:360px}.slide{display:none;animation:in .45s ease}.slide.active{display:block}@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.slide .big{font:500 clamp(28px,5vw,47px)/1.25 "Playfair Display",serif;margin-bottom:18px}.controls{display:flex;gap:9px;margin-top:25px}.controls button{border:1px solid var(--line);background:#62baff0d;color:white;border-radius:50%;width:40px;height:40px;cursor:pointer}.dots{display:flex;gap:6px;align-items:center;margin-left:10px}.dot{width:6px;height:6px;background:#34556e;border-radius:50%}.dot.on{background:#9fddff;box-shadow:0 0 10px #70c7ff}
+.timeline{display:grid;gap:14px}.event{display:grid;grid-template-columns:95px 1fr;gap:20px;padding:19px 0;border-bottom:1px solid #70c7ff12}.event:last-child{border:0}.date{color:var(--blue);font-size:11px;letter-spacing:.12em;text-transform:uppercase}.event div:last-child{color:var(--muted);line-height:1.75}
+.note{font:500 clamp(25px,4vw,40px)/1.35 "Playfair Display",serif}.highlight{color:#a8ddff}
+.hidden{display:none!important}.reveal{opacity:0;transform:translateY(18px);transition:.7s}.reveal.show{opacity:1;transform:none}
+footer{text-align:center;color:#61788e;font-size:11px;letter-spacing:.12em;padding-top:30px}
+@media(max-width:650px){.grid{grid-template-columns:1fr}.event{grid-template-columns:1fr;gap:5px}.hero{min-height:82vh}.card{border-radius:25px}}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<main class="shell">
+<header class="top"><span>Stark Industries // unofficial archive</span><span class="arc">J</span></header>
+
+<section class="hero">
+<div>
+<div class="eyebrow">classified file • june edition</div>
+<h1>hey, <span>June.</span></h1>
+<p>A small blue corner of the internet for the days when everything feels heavier than it should.</p>
+<a class="btn" href="#start">open the file ↓</a>
+</div>
+</section>
+
+<section id="start" class="card marvel reveal">
+<div class="label">01 / briefing</div>
+<div class="title">No fixing required.</div>
+<p class="small">This isn't a motivational speech. You don't need to suddenly become happy because someone told you to. Some days are just bad days.</p>
+<p class="small">But on those days, I hope you remember there is at least one person who will sit through the silence, listen to the yapping, hear the “idk” for the 47th time, or simply send something stupid until you laugh.</p>
+<p class="quote">Whenever you need me, I'm here. Not because you owe me anything. Just because you're my friend. <i>Quotation marks included.</i></p>
+</section>
+
+<section class="card reveal">
+<div class="label">02 / the june cinematic universe</div>
+<div class="grid">
+<div class="mini"><b>June</b><p>Born in June. Therefore legally obligated to be called June forever.</p></div>
+<div class="mini"><b>SONragnee</b><p>A terrible nickname. A scientifically proven way to annoy you.</p></div>
+<div class="mini"><b>Nikki Lite™</b><p>Same chaotic energy. Reduced dosage. Side effects include ruthless replies to annoying people.</p></div>
+<div class="mini"><b>Chess Department</b><p>Occupation: destroying people on a chessboard and then casually going “ahehehehe.”</p></div>
+</div>
+</section>
+
+<section class="card reveal">
+<div class="label">03 / classified memories</div>
+<div class="slides">
+<article class="slide active"><div class="big">“It started with a physics story.”</div><p class="small">You posted something about physics. I like physics. I replied. Somehow a random story became a friendship-with-quotation-marks. Pretty decent plot twist, honestly.</p></article>
+<article class="slide"><div class="big">The legendary 39/40.</div><p class="small">Not physics. <span class="highlight">MATH.</span> And after sir basically predicted that nobody was crossing 15. You walked out with 39. The academic equivalent of ignoring the script.</p></article>
+<article class="slide"><div class="big">“Please slide into my block list now.”</div><p class="small">Some people flirt. Some people receive a direct evacuation notice from June's social ecosystem.</p></article>
+<article class="slide"><div class="big">Backlogs: tragic.</div><p class="small">June: “I have so much backlog 😭.” Also June: proceeds to watch reels for an amount of time that historians refuse to document.</p></article>
+<article class="slide"><div class="big">The “idk” chronicles.</div><p class="small">Question asked. “idk.” Follow-up question. “idk.” Philosophical crisis. “idk.” Somehow still manages to yap for 45 minutes afterward.</p></article>
+<article class="slide"><div class="big">Ahehehehe.</div><p class="small">No explanation. No context. Just ahehehehe. Sometimes the sound of a person who has absolutely no intention of behaving normally.</p></article>
+<article class="slide"><div class="big">Epstein Saha has entered the chat.</div><p class="small">I genuinely don't know how my own surname became a recurring crime against my dignity. But apparently this is my life now.</p></article>
+<article class="slide"><div class="big">The dementia allegations.</div><p class="small">I forget one thing and suddenly there's a full medical diagnosis going around. Very professional. Zero peer review.</p></article>
+<article class="slide"><div class="big">The anti-rice campaign.</div><p class="small">Rice: exists. June: absolutely not. A rivalry stronger than most Marvel plotlines.</p></article>
+</div>
+<div class="controls"><button onclick="move(-1)">←</button><button onclick="move(1)">→</button><div class="dots" id="dots"></div></div>
+</section>
+
+<section class="card reveal">
+<div class="label">04 / marvel protocol</div>
+<div class="title">Every hero gets tired.</div>
+<p class="small">Even the people who seem completely fine have days where they don't feel like themselves. You don't have to be productive, funny, clever, or strong every second.</p>
+<div class="grid">
+<div class="mini"><b>Peter Parker protocol</b><p>Bad day? Keep going. Tomorrow exists.</p></div>
+<div class="mini"><b>Steve Rogers protocol</b><p>Do the right thing, even when nobody applauds.</p></div>
+<div class="mini"><b>Tony Stark protocol</b><p>When the plan goes horribly wrong, make a new plan. Preferably after sleeping.</p></div>
+<div class="mini"><b>Thor protocol</b><p>Sometimes the answer is genuinely “go eat something and rest.”</p></div>
+</div>
+</section>
+
+<section class="card reveal">
+<div class="label">05 / things worth remembering</div>
+<div class="timeline">
+<div class="event"><span class="date">remember</span><div>You are allowed to have a bad day without turning it into a bad life.</div></div>
+<div class="event"><span class="date">remember</span><div>You have people who care about you, including the annoying guy who apparently has permanent dementia.</div></div>
+<div class="event"><span class="date">remember</span><div>Your future is much bigger than whatever is hurting right now.</div></div>
+<div class="event"><span class="date">remember</span><div>You can complain about your life and still make progress. Both can exist.</div></div>
+<div class="event"><span class="date">remember</span><div>And if you can't find a reason to smile today, borrow one from tomorrow.</div></div>
+</div>
+</section>
+
+<section class="card reveal">
+<div class="label">06 / one honest thing</div>
+<div class="note">I sometimes feel helpless when you're sad because I want to make it disappear, and I can't.</div>
+<p class="small">I'm sorry for the times my attempts to cheer you up probably haven't been enough. I'm still learning that being there for someone doesn't always mean fixing the problem.</p>
+<p class="small">Sometimes it just means staying nearby. So that's what I'll do.</p>
+</section>
+
+<section class="card reveal">
+<div class="label">07 / future loading...</div>
+<div class="title">Please don't spend your whole story on one chapter.</div>
+<p class="small">There are exams to conquer, ridiculous arguments to have, chess games to win, anime to obsess over, Marvel theories to debate, reels to waste time on, and an unreasonable number of “ahehehehe” moments still waiting somewhere ahead.</p>
+<p class="small">These years matter. Your dreams matter. And you deserve to experience them fully—not perfectly, just fully.</p>
+</section>
+
+<section class="card reveal">
+<div class="label">08 / emergency button</div>
+<div class="title">For use on particularly stupid days.</div>
+<p class="small">If you're reading this while feeling awful, remember the rules:</p>
+<div class="grid">
+<div class="mini"><b>Rule 01</b><p>Drink water.</p></div>
+<div class="mini"><b>Rule 02</b><p>Sleep before making life decisions.</p></div>
+<div class="mini"><b>Rule 03</b><p>Watch something that makes you laugh.</p></div>
+<div class="mini"><b>Rule 04</b><p>Text someone you trust. You don't have to explain everything.</p></div>
+</div>
+</section>
+
+<section class="card reveal">
+<div class="label">09 / final transmission</div>
+<div class="note">You don't have to carry everything alone.</div>
+<p class="small">That's all. No dramatic ending. No secret code. Just a tiny reminder from one idiot to another that you're important, and that tomorrow is still yours.</p>
+<button class="btn" onclick="document.getElementById('final').classList.remove('hidden');this.style.display='none'">one last thing</button>
+<p id="final" class="note hidden" style="margin-top:30px;font-size:28px">Now go sleep before your brain opens another 37 tabs. Goodnight, June. 🌙</p>
+</section>
+
+<footer>made with too much blue • powered by friendship™ • zero productivity was harmed</footer>
+</main>
+<script>
+let cur=0,slides=[...document.querySelectorAll('.slide')],dots=document.getElementById('dots');
+slides.forEach((_,i)=>{let d=document.createElement('span');d.className='dot'+(i?'':' on');d.onclick=()=>show(i);dots.appendChild(d)});
+function show(i){cur=(i+slides.length)%slides.length;slides.forEach((s,n)=>s.classList.toggle('active',n===cur));[...dots.children].forEach((d,n)=>d.classList.toggle('on',n===cur))}
+function move(x){show(cur+x)}
+let io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('show')),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+</script>
+</body>
+</html>
